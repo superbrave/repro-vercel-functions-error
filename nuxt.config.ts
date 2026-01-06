@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  runtimeConfig: {
+    SYLIUS_BASE: process.env.SYLIUS_BASE,
+  },
   routeRules: {
     "/": {
       isr: 300,
