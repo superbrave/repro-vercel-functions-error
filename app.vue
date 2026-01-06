@@ -6,5 +6,11 @@
 </template>
 
 <script setup>
-const name = await $fetch("/api/my-name?firstName=John&lastName=Doe");
+const name = await $fetch("/api/my-name", {
+  method: "GET",
+  params: {
+    firstName: "John",
+    lastName: "Doe",
+  },
+});
 </script>
