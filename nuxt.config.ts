@@ -2,7 +2,23 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   routeRules: {
-    // prerender index route by default
-    '/': { prerender: true },
+    "/": {
+      isr: 300,
+      headers: {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+      },
+    },
+    "/**": {
+      headers: {
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=604800",
+
+        Vary: "Cookie",
+      },
+    },
+    "/api/**": {
+      headers: {
+        "Netlify-Vary": "query",
+      },
+    },
   },
 });
