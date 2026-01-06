@@ -16,6 +16,7 @@ export default defineNuxtConfig({
       },
     },
     "/api/**": {
+      isr: true,
       headers: {
         "Netlify-Vary": "query",
       },
