@@ -11,6 +11,8 @@ export default defineEventHandler(async (event) => {
           status: 400,
           headers: {
             "Netlify-CDN-Cache-Control": "public, max-age=0, must-revalidate",
+            "Cache-Control":
+              "public, s-maxage=300, stale-while-revalidate=604800",
           },
         }
       );
