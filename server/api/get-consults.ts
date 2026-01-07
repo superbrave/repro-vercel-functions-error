@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
     });
 
     const request = await fetch(
-      `${config.SYLIUS_BASE}/api/shop/products?${urlParameters}`,
+      `https://commerce.dokteronline.com/api/shop/products?${urlParameters}`,
       {
         headers: {
           "Sylius-Channel-Code": `dok_${country.toLowerCase()}`,
