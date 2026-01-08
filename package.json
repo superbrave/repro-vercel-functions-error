@@ -15,6 +15,6 @@
     "vue-router": "^4.2.5"
   },
   "resolutions": {
-    "nitropack": "npm:nitropack-nightly@latest"
+    "nitropack": "https://pkg.pr.new/nitrojs/nitro/nitropack@3539"
   }
 }
