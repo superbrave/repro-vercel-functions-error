@@ -20,7 +20,11 @@ export default defineNuxtConfig({
       },
     },
     "/api/**": {
-      isr: 300,
+      isr: {
+        expiration: 300,
+        passQuery: true,
+        allowQuery: ["country", "language"],
+      },
     },
   },
 });
