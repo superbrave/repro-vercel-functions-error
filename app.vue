@@ -12,7 +12,7 @@ const consults = ref([]);
 
 const fetchConsults = async () => {
   consults.value = await $fetch("/api/get-consults", {
-    method: "GET",
+    method: "POST",
     params: {
       country: "DE",
       language: "de",

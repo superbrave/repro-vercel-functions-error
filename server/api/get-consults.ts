@@ -33,7 +33,9 @@ export default defineEventHandler(async (event) => {
       }
     );
 
-    return await request.json();
+    const data = await request.json();
+
+    return Response.json(data);
   } catch (error) {
     return error;
   }
