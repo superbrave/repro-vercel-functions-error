@@ -1312,7 +1312,7 @@ packages:
       launch-editor: 2.6.1
       local-pkg: 0.5.0
       magicast: 0.3.2
-      nitropack: '@pkg.pr.new/nitrojs/nitro/nitropack@3539'
+      nitropack: '@pkg.pr.new/nitrojs/nitro/nitropack/3539'
       nuxt: 3.8.2(vite@4.5.0)
       nypm: 0.3.3
       ofetch: 1.3.3
@@ -4886,7 +4886,7 @@ packages:
       knitwork: 1.0.0
       magic-string: 0.30.5
       mlly: 1.4.2
-      nitropack: '@pkg.pr.new/nitrojs/nitro/nitropack@3539'
+      nitropack: '@pkg.pr.new/nitrojs/nitro/nitropack/3539'
       nuxi: 3.10.0
       nypm: 0.3.3
       ofetch: 1.3.3
@@ -7037,7 +7037,7 @@ packages:
       readable-stream: 4.7.0
     dev: true
 
-  '@pkg.pr.new/nitrojs/nitro/nitropack@3539':
+  '@pkg.pr.new/nitrojs/nitro/nitropack/3539':
     resolution: {tarball: https://pkg.pr.new/nitrojs/nitro/nitropack@3539}
     name: nitropack
     version: 2.12.9
