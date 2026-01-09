@@ -35,7 +35,10 @@ export default defineEventHandler(async (event) => {
 
     const data = await request.json();
 
-    return Response.json(data);
+    return Response.json({
+      henk: "frietjes",
+      frietjes: "henk",
+    });
   } catch (error) {
     return error;
   }
