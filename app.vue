@@ -1,16 +1,5 @@
 <template>
-  <div>
-    <h1>Consults</h1>
-    <ul v-for="consult in consults" :key="consult.id">
-      <li>{{ consult.name }}</li>
-    </ul>
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
-
-<script setup>
-import { useConsults } from "@/app/composables/consults";
-
-const { consults, fetchConsults } = useConsults();
-
-await fetchConsults();
-</script>

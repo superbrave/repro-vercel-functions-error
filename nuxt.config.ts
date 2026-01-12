@@ -23,7 +23,13 @@ export default defineNuxtConfig({
       isr: {
         expiration: 300,
         passQuery: true,
-        allowQuery: ["country", "language"],
+        allowQuery: [
+          "country",
+          "language",
+          "couponCode",
+          "tokenValue",
+          "jwt_token",
+        ],
       },
     },
   },

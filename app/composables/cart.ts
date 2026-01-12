@@ -21,9 +21,12 @@ export function useCartActions() {
     }
 
     const { data, error } = await useFetch(
-      "https://dokteronline.commerce.sbtest.nl/api/sylius-create-cart",
+      "/api/sylius-create-cart",
       fetchOptions
     );
+
+    console.log("data", data.value);
+    console.log("error", error.value);
 
     if (error.value?.statusCode === 401) {
       localStorage.removeItem("jwt_token");
@@ -62,6 +65,7 @@ export function useCartActions() {
     }
 
     if (!tokenValue) {
+      console.log("create cart");
       await createCart(language, country);
       tokenValue = localStorage.getItem("tokenValue");
     }
@@ -82,17 +86,15 @@ export function useCartActions() {
       };
     }
 
-    const { error } = await useFetch(
-      "https://dokteronline.commerce.sbtest.nl/api/sylius-add-coupon",
-      fetchOptions
-    );
+    const { error } = await useFetch("/api/sylius-add-coupon", fetchOptions);
 
     // When the response is a 404 it means the cart does not exist.
     // We need to create a new cart and add the coupon code to it.
     if (error.value?.statusCode === 404) {
-      await createCart(language, country);
-      tokenValue = localStorage.getItem("tokenValue");
-      await addCouponCodeToCart(couponCode, language, country);
+      //   await createCart(language, country);
+      //   tokenValue = localStorage.getItem("tokenValue");
+      //   await addCouponCodeToCart(couponCode, language, country);
+      console.log("error", error.value);
 
       return { success: false };
     }

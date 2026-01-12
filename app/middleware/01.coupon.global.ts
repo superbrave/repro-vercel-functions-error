@@ -1,6 +1,5 @@
 export default defineNuxtRouteMiddleware(async () => {
   if (import.meta.server) {
-    console.log("server");
     return;
   }
 
@@ -12,8 +11,6 @@ export default defineNuxtRouteMiddleware(async () => {
     () => null
   );
 
-  console.log(couponCode);
-
   if (typeof couponCode === "string" && couponCode.trim() !== "") {
     console.info("[Coupon Middleware] Applying coupon code:", couponCode);
     processed.value = couponCode;
@@ -24,7 +21,7 @@ export default defineNuxtRouteMiddleware(async () => {
 
     const config = useRuntimeConfig();
     const fallbackLanguage = config.public.supportsLocale ? "" : "nl";
-    const fallbackCountry = config.public.supportsLocale ? "" : "be";
+    const fallbackCountry = config.public.supportsLocale ? "" : "BE";
 
     localStorage.setItem("test", "test");
 
