@@ -1,5 +1,6 @@
 export default defineNuxtRouteMiddleware(async () => {
   if (import.meta.server) {
+    console.log("server");
     return;
   }
 
@@ -11,11 +12,9 @@ export default defineNuxtRouteMiddleware(async () => {
     () => null
   );
 
-  if (
-    typeof couponCode === "string" &&
-    couponCode.trim() !== "" &&
-    couponCode !== processed.value
-  ) {
+  console.log(couponCode);
+
+  if (typeof couponCode === "string" && couponCode.trim() !== "") {
     console.info("[Coupon Middleware] Applying coupon code:", couponCode);
     processed.value = couponCode;
 
