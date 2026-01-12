@@ -12,7 +12,5 @@ import { useConsults } from "@/app/composables/consults";
 
 const { consults, fetchConsults } = useConsults();
 
-onMounted(async () => {
-  await fetchConsults();
-});
+await fetchConsults();
 </script>
