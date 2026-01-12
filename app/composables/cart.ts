@@ -36,10 +36,7 @@ export function useCartActions() {
       return;
     }
 
-    if (
-      (data.value as { tokenValue?: string })?.tokenValue &&
-      import.meta.client
-    ) {
+    if ((data.value as { tokenValue?: string })?.tokenValue) {
       localStorage.setItem(
         "tokenValue",
         (data.value as { tokenValue: string }).tokenValue

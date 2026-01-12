@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
 
     console.log("data", data);
 
-    return Response.json(data, { status: request.status });
+    return data;
   } catch (error) {
     return error;
   }
