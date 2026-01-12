@@ -8,17 +8,11 @@
 </template>
 
 <script setup>
-const consults = ref([]);
+import { useConsults } from "@/app/composables/consults";
 
-const fetchConsults = async () => {
-  consults.value = await $fetch("/api/get-consults", {
-    method: "POST",
-    params: {
-      country: "DE",
-      language: "de",
-    },
-  });
-};
+const { consults, fetchConsults } = useConsults();
 
-await fetchConsults();
+onMounted(async () => {
+  await fetchConsults();
+});
 </script>
