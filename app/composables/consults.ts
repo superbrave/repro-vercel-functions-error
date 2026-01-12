@@ -10,7 +10,7 @@ export function useConsults() {
       },
     });
 
-    if (consults.value.length > 0) {
+    if (import.meta.client && consults.value.length > 0) {
       localStorage.setItem("consults", JSON.stringify(consults.value[0]));
     }
   };
