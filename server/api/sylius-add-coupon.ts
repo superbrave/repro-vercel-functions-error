@@ -48,7 +48,8 @@ export default defineEventHandler(async (event) => {
     );
 
     const data = await request.json();
-    return Response.json(data, { status: request.status });
+
+    return new Response(JSON.stringify(data), { status: request.status });
   } catch (error) {
     return error;
   }
