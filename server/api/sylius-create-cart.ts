@@ -36,7 +36,15 @@ export default defineEventHandler(async (event) => {
 
     const data = await request.json();
 
-    return new Response(JSON.stringify(data), { status: request.status });
+    return Response.json(data);
+    /* Not working (FUNCTION_INVOCATION_FAILED) */
+    // return new Response(JSON.stringify(data), { status: request.status });
+
+    /* Not working (FUNCTION_INVOCATION_FAILED) */
+    // setResponseStatus(event, request.status);
+
+    /* Working: */
+    return data;
   } catch (error) {
     return error;
   }
