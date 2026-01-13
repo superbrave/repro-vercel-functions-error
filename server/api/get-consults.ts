@@ -36,7 +36,7 @@ export default defineEventHandler(async (event) => {
     const data = await request.json();
 
     const statusCode = status === "200" ? 200 : 201;
-    return new Response(JSON.stringify(data), { status: statusCode });
+    return Response.json(data, { status: statusCode });
   } catch (error) {
     return error;
   }
