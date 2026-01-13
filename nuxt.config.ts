@@ -29,6 +29,7 @@ export default defineNuxtConfig({
           "couponCode",
           "tokenValue",
           "jwt_token",
+          "status",
         ],
       },
     },
