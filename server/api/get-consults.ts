@@ -2,7 +2,7 @@ export default defineEventHandler(async (event) => {
   try {
     const config = useRuntimeConfig();
 
-    const { language, country } = getQuery(event);
+    const { language, country, status } = getQuery(event);
 
     if (typeof country !== "string" || typeof language !== "string") {
       return new Response(
@@ -35,7 +35,7 @@ export default defineEventHandler(async (event) => {
 
     const data = await request.json();
 
-    return Response.json(data);
+    return Response.json(data, { status: status as number });
   } catch (error) {
     return error;
   }

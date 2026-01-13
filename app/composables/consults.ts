@@ -1,12 +1,13 @@
 export function useConsults() {
   const consults = ref([]);
 
-  const fetchConsults = async () => {
+  const fetchConsults = async (status: number) => {
     consults.value = await $fetch("/api/get-consults", {
       method: "POST",
       params: {
         country: "DE",
         language: "de",
+        status,
       },
     });
 

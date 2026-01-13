@@ -10,5 +10,6 @@
 <script setup>
 const { consults, fetchConsults } = useConsults();
 
-await fetchConsults();
+await fetchConsults(200);
+await fetchConsults(201);
 </script>
