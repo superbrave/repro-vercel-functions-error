@@ -44,7 +44,7 @@ export default defineEventHandler(async (event) => {
     // setResponseStatus(event, request.status);
 
     /* Working: */
-    return data;
+    // return data;
   } catch (error) {
     return error;
   }
