@@ -36,8 +36,7 @@ export default defineEventHandler(async (event) => {
 
     const data = await request.json();
 
-    console.log("data", data);
-
+    setResponseStatus(event, request.status);
     return data;
   } catch (error) {
     return error;
