@@ -4,6 +4,8 @@
     <ul v-for="consult in consults" :key="consult.id">
       <li>{{ consult.name }}</li>
     </ul>
+
+    <button @click="fetchConsults(400)">Fetch Consults 400 error</button>
   </div>
 </template>
 
