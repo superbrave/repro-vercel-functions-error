@@ -33,10 +33,16 @@ export default defineNuxtConfig({
         ],
       },
     },
-    "/checkout/winkelwagen": {
+    "/:locale/winkelwagen/**": {
       isr: false,
       proxy: {
         to: `https://test--dokteronline.sbpreview.nl/checkout/index.html`,
+      },
+    },
+    "/checkoutAssets/**": {
+      isr: false,
+      proxy: {
+        to: `https://test--dokteronline.sbpreview.nl/checkout/checkoutAssets/**`,
       },
     },
   },
