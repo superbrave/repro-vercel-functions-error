@@ -4,13 +4,13 @@ export default defineNuxtConfig({
   runtimeConfig: {
     SYLIUS_BASE: process.env.SYLIUS_BASE,
   },
-  experimental: {
-    defaults: {
-      nuxtLink: {
-        trailingSlash: "append",
-      },
-    },
-  },
+  // experimental: {
+  //   defaults: {
+  //     nuxtLink: {
+  //       trailingSlash: "append",
+  //     },
+  //   },
+  // },
   routeRules: {
     "/": {
       isr: 300,
