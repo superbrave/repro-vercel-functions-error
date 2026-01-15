@@ -40,6 +40,12 @@ export default defineNuxtConfig({
         ],
       },
     },
+    "/:locale/redirect": {
+      isr: false,
+      proxy: {
+        to: `https://test--dokteronline.sbpreview.nl/checkout/index.html`,
+      },
+    },
     "/:locale/winkelwagen/**": {
       isr: false,
       proxy: {

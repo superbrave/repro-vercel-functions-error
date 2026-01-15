@@ -8,7 +8,7 @@
     <button @click="fetchConsults(400)">Fetch Consults 400 error</button>
 
     <br /><br />
-    <NuxtLink external to="/nl-nl/winkelwagen/">
+    <NuxtLink external to="/nl-nl/redirect?name=cart">
       Link to a proxy page
     </NuxtLink>
   </div>
