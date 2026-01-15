@@ -6,6 +6,10 @@
     </ul>
 
     <button @click="fetchConsults(400)">Fetch Consults 400 error</button>
+
+    <NuxtLink external to="/checkout/winkelwagen">
+      Link to a proxy page
+    </NuxtLink>
   </div>
 </template>
 
