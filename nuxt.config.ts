@@ -46,7 +46,7 @@ export default defineNuxtConfig({
         to: `https://test--dokteronline.sbpreview.nl/checkout/index.html`,
       },
     },
-    "/:locale/winkelwagen/**": {
+    "/:locale/winkelwagen": {
       isr: false,
       proxy: {
         to: `https://test--dokteronline.sbpreview.nl/checkout/index.html`,
