@@ -11,6 +11,11 @@
     <NuxtLink external to="/nl-nl/redirect?name=cart">
       Link to a proxy page
     </NuxtLink>
+
+    <br /><br />
+    <NuxtLink external to="/nl-nl/redirect?name=account">
+      Link to a proxy page
+    </NuxtLink>
   </div>
 </template>
 
