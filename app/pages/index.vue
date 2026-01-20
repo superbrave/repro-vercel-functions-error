@@ -9,12 +9,12 @@
 
     <br /><br />
     <NuxtLink external to="/nl-nl/redirect?name=cart">
-      Link to a shopping cartproxy page
+      Link to a shopping cart proxy page
     </NuxtLink>
 
     <br /><br />
     <NuxtLink external to="/nl-nl/redirect?name=account">
-      Link to a accountproxy page
+      Link to a account proxy page
     </NuxtLink>
   </div>
 </template>
